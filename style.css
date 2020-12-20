@@ -1,0 +1,71 @@
+/* Layout */
+body{
+    background-image: url('https://media.giphy.com/media/RHIKETUlUINYvV7CAO/giphy.gif');
+    background-size: cover;
+}
+.main {
+    display: flex;
+    padding: 2em;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+}
+
+.clockbox,   
+#clock {
+    width: 100%;
+}
+
+/* Clock styles */
+.circle {
+    fill: none; /* Here we are using color inside clock circle*/
+    stroke: rgba(241, 183, 8, 0.931);
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+   
+}
+
+.mid-circle {
+    fill: rgb(245, 241, 5);
+}
+.hour-marks {
+    fill: none;
+    stroke: rgb(246, 242, 8);
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: rgb(248, 244, 10);
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: rgb(251, 227, 7);
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: rgb(246, 211, 8);
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    transition: transform .5s ease-in-out;
+}
